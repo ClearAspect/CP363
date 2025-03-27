@@ -1,3 +1,10 @@
+"""
+Requires:
+- Python 3.11
+- mysql-connector-python
+- tkinter
+"""
+
 import mysql.connector
 import tkinter as tk
 from tkinter import ttk, messagebox
