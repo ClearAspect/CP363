@@ -1,7 +1,7 @@
 {
   description = "A Nix-flake-based Python development environment";
 
-  inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
 
   outputs = {
     self,
@@ -23,6 +23,10 @@
             pip
             venvShellHook
           ]);
+
+        shellHook = ''
+          exec ${pkgs.fish}/bin/fish
+        '';
       };
     });
   };
